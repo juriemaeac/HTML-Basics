@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Order Form</title>
+    </head>
+    <style>
+        .center {
+            margin: auto;
+            width: 50%;
+            border: 1px solid black;
+            padding: 10px;
+        }
+        input[type=text], select {
+            padding: 3px 20px;
+            margin: 3px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        input[type=text1], select {
+            padding: 3px 10px;
+            margin: 3px 0;
+            display: inline-block;
+            border: 1px none #ccc;
+            border-radius: 0px;
+            box-sizing: border-box;
+        }
+        input[type=email], select {
+            padding: 3px 20px;
+            margin: 0 0 10px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        input[type=date], select {
+            padding: 3px 20px;
+            margin: 0 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            color: black
+        }
+        input[type=submit] {
+            background-color: green;
+            color: white;
+            padding: 5px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type=submit]:hover {
+            background-color: rgb(4, 88, 4);
+        }
+        input[type=reset] {
+            background-color: red;
+            color: white;
+            padding: 5px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=reset]:hover {
+            background-color: rgb(66, 3, 3);
+        }
+        th{
+            padding: 0 15px 5px 15px;
+        }
+    </style> 
+    
+    <body>
+        <table frame="box" align="center">
+            <tr>
+                <th colspan="6">
+                    <form action="page2.html" method="post">
+                        <p><center><h3><u>Order Form</u></h3></center></p>
+                        <table frame="box" align="center">
+                            <tr>
+                                <th colspan="1">
+                                    <p><font color="blue"><h3><b><u>Customer</u></b></h3></font></p>
+                                </th>
+                                <td colspan="3" ></td>
+                                <td style="text-align:right" colspan="2"> <b>Date:</b></td>
+                                <td><input style="text-align:left" type="date" id="date" name="date" placeholder="dd/mm/yyyy" size="10"></td>
+                            </tr>
+                            <tr>
+                                <td ></td>
+                                <td style="text-align:right"> <b>Customer ID:</b></td>
+                                <td ><input style="text-align:left" type="text1" name="customerID" value="00001" readonly></td>
+                                <td colspan="2" ></td>
+                                <td style="text-align:right" > <b>Order Number:</b></td>
+                                <td><input style="text-align:left" type="text" name="OrderNo" value="00001" size="10" readonly></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:right" > <b>Customer Name:</b></td>
+                                <td colspan="3"><input type="text" name="customer" required= "required" placeholder="Required Input" size="30"></td>
+                                
+                            </tr>
+                            <tr>
+                                <td style="text-align:right" > <b>Address:</b></td>
+                                <td colspan="5"><input type="text" name="address" required= "required" placeholder="Required Input" size="71"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:right" ><b>Contact Number:</b></td>
+                                <td colspan="3"><input type="text" placeholder="Required Input" name="ContactNo" size="30"></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:right" ><b>Phone:</b> </td>
+                                <td colspan="3" ><input type="text" name="phone" size="30"></td>
+                                <td style="text-align:right" ><b>Mobile:</b></td>
+                                <td ><input type="text" name="mobile" required= "required" placeholder="Required Input"></td>
+                            </tr>
+                            <tr>
+                                <td><b>E-mail Address:</b></td>
+                                <td colspan="3" ><input type="email" placeholder="Required Input" name="" size="30"></td>
+                            </tr>
+                        </table>
+                        <p><font color="blue"><h3><b><u>Products to Order</u></b></h3></font></p>
+                        <table border="1" cellspacing="9" width="100%" align="center">
+                            <th>Unit</th>
+                            <th>Quantity</th>
+                            <th>Product Code</th>
+                            <th>Description</th>
+                            <th>Unit Price</th>
+                            <th>Total Price</th>
+                            <tr align="Center">
+                                <td><input type="text1" name="unit" size="10" value="Box" readonly></td>
+                                <td>
+                                    <select name="quantity" id="quantity" style="border: none;">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                    </select>
+                                </td>
+                                <td><input type="text1" name="code" size="10" value="r1"></td>
+                                <td><input type="text1" name="description" size="20" value="Denorado" readonly></td>
+                                <td><input style="text-align:right" type="text1" name="unitPrice" size="10" value="1200.00" readonly></td>
+                                <td><input style="text-align:right" type="text1" name="totalPrice" size="10" value="1200.00" readonly></td>
+                            </tr>
+                            <tr align="Center">
+                                <td><input type="text1" name="unit" size="10" readonly></td>
+                                <td>
+                                    <select name="quantity" id="" style="border: none;">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                    </select>
+                                </td>
+                                <td><input type="text1" name="code" size="10"></td>
+                                <td><input type="text1" name="description" size="20" readonly></td>
+                                <td><input style="text-align:right" type="text1" name="unitPrice" size="10" readonly></td>
+                                <td><input style="text-align:right" type="text1" name="totalPrice" size="10" readonly></td>
+                            </tr>
+                            <tr align="Center">
+                                <td><input type="text1" name="unit" size="10" readonly></td>
+                                <td>
+                                    <select name="quantity" id="" style="border: none;">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                    </select>
+                                </td>
+                                <td><input type="text1" name="code" size="10"></td>
+                                <td><input type="text1" name="description" size="20" readonly></td>
+                                <td><input style="text-align:right" type="text1" name="unitPrice" size="10" readonly></td>
+                                <td><input style="text-align:right" type="text1" name="totalPrice" size="10" readonly></td>
+                            </tr>
+                            <tr align="Center">
+                                <td><input type="text1" name="unit" size="10" readonly></td>
+                                <td>
+                                    <select name="quantity" id="" style="border: none;">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                    </select>
+                                </td>
+                                <td><input type="text1" name="code" size="10"></td>
+                                <td><input type="text1" name="description" size="20" readonly></td>
+                                <td><input style="text-align:right" type="text1" name="unitPrice" size="10" readonly></td>
+                                <td><input style="text-align:right" type="text1" name="totalPrice" size="10" readonly></td>
+                            </tr>
+                            <tr align="Center">
+                                <td><input type="text1" name="unit" size="10" readonly></td>
+                                <td>
+                                    <select name="quantity" id="" style="border: none;">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                    </select>
+                                </td>
+                                <td><input type="text1" name="code" size="10"></td>
+                                <td><input type="text1" name="description" size="20" readonly></td>
+                                <td><input style="text-align:right" type="text1" name="unitPrice" size="10" readonly></td>
+                                <td><input style="text-align:right" type="text1" name="totalPrice" size="10" readonly></td>
+                            </tr>
+                        </table>
+                        <table align="right" >
+                            <tr>
+                                <td>Total:</td>
+                                <td><input style="text-align:right; color:red" type="text" name="total" size="15" value="00.00" readonly></td>
+                            </tr>
+                        </table>
+                        <input type="submit" value="Submit" name="submit">
+                        <input type="reset" name="reset" value="Reset" />
+                    </form>
+                </th>
+            </tr>
+        </table>
+    </body>
+</html>
